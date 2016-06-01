@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    </head>
+  <body>
+
+    <h1>Fruit Market</h1>
+<!-- start row of fruit on the market -->
+<div class='row'>
+<!-- banana div with img, button and a div to insert price -->
+  <div class='col-md-3' id='banana'>
+    <img src="banana.png" alt="" />
+    <h2>Bananas</h2>
+    <div class='price' id='bananaPrice'></div>
+    <button type="button" name="button">BUY</button>
+  </div>
+<!-- orange div with img, button and a div to insert price -->
+  <div class='col-md-3' id='orange'>
+    <img src="orange.png" alt="" />
+    <h2>Oranges</h2>
+    <div class='price' id='orangePrice'></div>
+    <button type="button" name="button">BUY</button>
+  </div>
+<!-- apple div with img, button and a div to insert price -->
+  <div class='col-md-3' id='apple'>
+    <img src="apple.png" alt="" />
+    <h2>Apples</h2>
+    <div class='price' id='applePrice'></div>
+    <button type="button" name="button">BUY</button>
+  </div>
+<!-- grape div with img, button and a div to insert price -->
+  <div class ='col-md-3' id='grapes'>
+    <img src="grapes.png" alt="" />
+    <h2>Grapes</h2>
+    <div class='price' id='grapePrice'></div>
+    <button type="button" name="button">BUY</button>
+  </div>
+
+</div>
+<!-- div that will hold your cash variable -->
+<div class='cash col-md-6 col-md-offset-3'>
+<h3>YOUR CASH = $100</h3>
+</div>
+<!-- div that contains your inventory, text is 
+placeholder for variables from scrpt -->
+<div class='inventory'>
+  Inventory:
+  <ul>
+    <li class='banana'> 0 Bananas </li>
+    <li class='orange'> 0 Oranges </li>
+    <li class='apple'> 0 Apples </li>
+    <li class='grapes'> 0 Grapes </li>
+  </ul>
+</div>
+
+  </body>
+</html>
