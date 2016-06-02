@@ -4,27 +4,69 @@ var haveBananas=0;
 var haveOranges=0;
 var haveApples=0;
 var haveGrapes=0;
-
-
-
+var randomUpDown;
+var randomIncrement;
 
 // everything below this line works
 // calculates and checks remaining money, updates inventory
 $( document ).ready(function() {
 
-//generates random prices between 0.01 and 10.00
-  $('#bananaPrice').text(((Math.random() * 10) + 0.01).toFixed(2));
-  var bananaPrice = $('#bananaPrice').text()
-  console.log(bananaPrice);
-  $('#orangePrice').text(((Math.random() * 10) + 0.01).toFixed(2));
-  var orangePrice = $('#orangePrice').text()
-  $('#applePrice').text(((Math.random() * 10) + 0.01).toFixed(2));
-  var applePrice = $('#applePrice').text()
-  $('#grapePrice').text(((Math.random() * 10) + 0.01).toFixed(2));
-  var grapePrice = $('#grapePrice').text()
+//generates random prices between 0.50 and 9.99
+  $('#bananaPrice').text(((Math.random() * 9.49) + 0.50).toFixed(2));
+  var bananaPrice = $('#bananaPrice').text();
+  $('#orangePrice').text(((Math.random() * 9.49) + 0.50).toFixed(2));
+  var orangePrice = $('#orangePrice').text();
+  $('#applePrice').text(((Math.random() * 9.49) + 0.50).toFixed(2));
+  var applePrice = $('#applePrice').text();
+  $('#grapePrice').text(((Math.random() * 9.49) + 0.50).toFixed(2));
+  var grapePrice = ($('#grapePrice').text());
      $('.cash').text('YOUR CASH = $' + money);
 
-
+//anonymous function that sets intervals to recalc the numbers
+setInterval(function(){
+  //random price increase/decrease in increments of 0.01-0.50 for each of the fruits
+  //banana
+  randomUpDown = Math.floor(Math.random() * 2);
+  randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
+  if (randomUpDown === 0) {
+        bananaPrice = ( parseFloat(bananaPrice) - parseFloat(randomIncrement));
+      }
+      else {
+        bananaPrice = ( parseFloat(bananaPrice) + parseFloat(randomIncrement));
+      }
+$('#bananaPrice').text(bananaPrice.toFixed(2));
+//orange
+randomUpDown = Math.floor(Math.random() * 2);
+randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
+if (randomUpDown === 0) {
+      orangePrice = ( parseFloat(orangePrice) - parseFloat(randomIncrement));
+    }
+    else {
+      orangePrice = ( parseFloat(orangePrice) + parseFloat(randomIncrement));
+    }
+$('#orangePrice').text(orangePrice.toFixed(2));
+//apple
+randomUpDown = Math.floor(Math.random() * 2);
+randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
+if (randomUpDown === 0) {
+      applePrice = ( parseFloat(applePrice) - parseFloat(randomIncrement));
+    }
+    else {
+      applePrice = ( parseFloat(applePrice) + parseFloat(randomIncrement));
+    }
+$('#applePrice').text(applePrice.toFixed(2));
+//grape
+randomUpDown = Math.floor(Math.random() * 2);
+randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
+if (randomUpDown === 0) {
+      grapePrice = ( parseFloat(grapePrice) - parseFloat(randomIncrement));
+    }
+    else {
+      grapePrice = ( parseFloat(grapePrice) + parseFloat(randomIncrement));
+    }
+$('#grapePrice').text(grapePrice.toFixed(2));
+//change the interval here:
+     }, 4000);
 
 // Buy button functions
      $('#buyBananaBtn').click(function(){

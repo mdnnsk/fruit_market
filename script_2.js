@@ -11,6 +11,12 @@ var randomPrice = 0;
 
 var endPrice = 0;
 
+var priceChange = setInterval(fruitTimer, 15000);
+
+function fruitTimer() {
+   console.log("itWorks!");
+ }
+
 var getPrice = function(){
 
  var randomChange = Math.floor(Math.random() * 2);
