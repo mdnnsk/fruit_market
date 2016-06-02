@@ -12,7 +12,8 @@ h1 { text-align: center;}
 .cash  {
 margin-left: 50px;
 margin-top: 20px;
-
+width: 300px;
+text-align: center;
 }
 
 .inventory {
