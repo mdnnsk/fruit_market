@@ -41,11 +41,11 @@ $('#bananaPrice').text(bananaPrice.toFixed(2));
 randomUpDown = Math.floor(Math.random() * 2);
 randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
 if (randomUpDown === 0) {
-      orangePrice = ( parseFloat(orangePrice) - parseFloat(randomIncrement));
+      orangePrice = ( parseFloat(orangePrice) + parseFloat(randomIncrement));
       if (orangePrice>=10) {orangePrice = 9.99;}
     }
     else {
-      orangePrice = ( parseFloat(orangePrice) + parseFloat(randomIncrement));
+      orangePrice = ( parseFloat(orangePrice) - parseFloat(randomIncrement));
       if (orangePrice <= 0) {orangePrice = 0.01;}
     }
 $('#orangePrice').text(orangePrice.toFixed(2));
@@ -53,11 +53,11 @@ $('#orangePrice').text(orangePrice.toFixed(2));
 randomUpDown = Math.floor(Math.random() * 2);
 randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
 if (randomUpDown === 0) {
-      applePrice = ( parseFloat(applePrice) - parseFloat(randomIncrement));
+      applePrice = ( parseFloat(applePrice) + parseFloat(randomIncrement));
       if (applePrice>=10) {applePrice = 9.99;}
     }
     else {
-      applePrice = ( parseFloat(applePrice) + parseFloat(randomIncrement));
+      applePrice = ( parseFloat(applePrice) - parseFloat(randomIncrement));
       if (applePrice <= 0) {applePrice = 0.01;}
     }
 $('#applePrice').text(applePrice.toFixed(2));
@@ -65,11 +65,11 @@ $('#applePrice').text(applePrice.toFixed(2));
 randomUpDown = Math.floor(Math.random() * 2);
 randomIncrement = ((Math.random() * 0.49) + 0.01).toFixed(2);
 if (randomUpDown === 0) {
-      grapePrice = ( parseFloat(grapePrice) - parseFloat(randomIncrement));
+      grapePrice = ( parseFloat(grapePrice) + parseFloat(randomIncrement));
       if (grapePrice>=10) {bananaPrice = 9.99;}
     }
     else {
-      grapePrice = ( parseFloat(grapePrice) + parseFloat(randomIncrement));
+      grapePrice = ( parseFloat(grapePrice) - parseFloat(randomIncrement));
       if (grapePrice <= 0) {grapePrice = 0.01;}
     }
 $('#grapePrice').text(grapePrice.toFixed(2));
